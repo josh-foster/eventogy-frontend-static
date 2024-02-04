@@ -53,6 +53,7 @@ async function getEvents(): Promise<Event[]> {
 const EventCard = ({ event, imgUrl }: { event: Event; imgUrl: string }) => {
   return (
     <Card className="shadow-lg m-2 w-80">
+      <div className="w-full h-2 b bg-primary rounded-tl-md rounded-tr-md" />
       <div className="relative aspect-[1920/1080]">
         <Image
           src={imgUrl}
@@ -67,10 +68,10 @@ const EventCard = ({ event, imgUrl }: { event: Event; imgUrl: string }) => {
           {new Date(event.created_at).toDateString()}
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-4 py-2">
         <p className="font-bold">London</p>
       </CardContent>
-      <CardFooter className="flex justify-between">
+      <CardFooter className="flex justify-between pt-2">
         <Star className="h-4 w-4" />
         <DropdownMenu>
           <DropdownMenuTrigger>
@@ -91,8 +92,6 @@ const EventCard = ({ event, imgUrl }: { event: Event; imgUrl: string }) => {
 export default async function Home() {
   const events = await getEvents();
 
-  console.log(events);
-
   return (
     <div className="flex flex-wrap justify-center bg-muted">
       {events.map((event, index) => (
@@ -101,7 +100,7 @@ export default async function Home() {
           event={event}
           imgUrl={`https://picsum.photos/id/${Math.floor(
             Math.random() * 500
-          )}/1920/1080`}
+          )}/480/270`}
         />
       ))}
     </div>
