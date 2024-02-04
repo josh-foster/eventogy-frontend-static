@@ -36,7 +36,7 @@ export default function RootLayout({
           <div className="relative inline-block w-6/12">
             <Search
               color="grey"
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 pointer-events-none"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 pointer-events-none p-0.5"
             />
             <Input
               className="pl-12 w-full rounded-full"
