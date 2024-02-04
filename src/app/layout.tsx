@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="flex justify-between items-center px-4 py-2.5 bg-muted z-20 w-full sticky top-0 left-0  overflow-x-hidden">
+        <header className="flex justify-between items-center px-4 py-2.5 bg-muted z-20 w-full sticky top-0 left-0 overflow-x-hidden">
           <Image priority height={24} src={eventogyLogo} alt="Eventogy Logo" />
           <div className="relative inline-block w-6/12">
             <Search
@@ -54,7 +54,9 @@ export default function RootLayout({
             </PopoverContent>
           </Popover>
         </header>
-        <h1 className="px-4 py-4 font-bold text-xl">Event Hub</h1>
+        <h1 className="px-4 py-4 font-bold text-xl sticky top-[60px] left-0 bg-background z-20">
+          Event Hub
+        </h1>
         {children}
       </body>
     </html>
