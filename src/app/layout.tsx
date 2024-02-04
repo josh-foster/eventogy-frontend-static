@@ -1,5 +1,5 @@
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
 import "./globals.css";
 
 const inter = Inter({
@@ -8,15 +8,19 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Eventogy - Static",
   description: "",
 };
 
-export default async function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body>{children}</body>
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
