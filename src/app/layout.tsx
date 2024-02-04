@@ -5,12 +5,9 @@ import { Search, User } from "lucide-react";
 
 import "./globals.css";
 import eventogyLogo from "../../public/eventogy-logo.svg";
-import { Input } from "@/components/ui/input";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+import { Input } from "@/components/input";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/popover";
+import Link from "next/link";
 
 const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
@@ -31,8 +28,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="flex justify-between items-center px-4 py-2.5 bg-muted z-20 w-full sticky top-0 left-0 overflow-x-hidden">
-          <Image priority height={24} src={eventogyLogo} alt="Eventogy Logo" />
+        <header className="flex justify-between items-center px-8 py-2.5 bg-muted z-20 w-full sticky top-0 left-0 overflow-x-hidden">
+          <Link href="/">
+            <Image
+              priority
+              height={24}
+              src={eventogyLogo}
+              alt="Eventogy Logo"
+            />
+          </Link>
           <div className="relative inline-block w-6/12">
             <Search
               color="grey"
@@ -54,9 +58,7 @@ export default function RootLayout({
             </PopoverContent>
           </Popover>
         </header>
-        <h1 className="px-4 py-4 font-bold text-xl sticky top-[60px] left-0 bg-background z-20">
-          Event Hub
-        </h1>
+
         {children}
       </body>
     </html>
