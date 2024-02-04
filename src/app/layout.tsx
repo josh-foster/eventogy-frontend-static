@@ -54,6 +54,7 @@ export default function RootLayout({
             </PopoverContent>
           </Popover>
         </header>
+        <h1 className="px-4 py-4 font-bold text-xl">Event Hub</h1>
         {children}
       </body>
     </html>
