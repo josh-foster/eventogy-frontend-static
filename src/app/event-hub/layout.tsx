@@ -16,11 +16,12 @@ export default function EventHubLayout({
 }>) {
   return (
     <div>
-      <h1 className="px-8 py-4 font-bold text-2xl sticky top-[60px] left-0 bg-background z-20">
+      <h1 className="px-8 py-4 font-bold text-2xl sticky top-[60px] left-0 bg-background z-20 shadow-2xl">
         Event Hub
       </h1>
-      <div className="flex justify-between py-4 px-8 sticky left-0 top-[124px] bg-background z-20">
+      <div className="flex justify-between py-4 px-8 sticky left-0 top-[124px] bg-muted z-20">
         <EventHubNavTabs />
+
         <div className="flex items-center">
           <Button variant="ghost" className="text-primary mr-1 p-1.5">
             <Table size={20} />
@@ -31,12 +32,11 @@ export default function EventHubLayout({
           <Button variant="ghost" className="mr-6 p-1.5">
             <SlidersHorizontal size={20} />
           </Button>
-
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
                 variant="outline"
-                className="bg-primary text-primary-foreground"
+                className="bg-primary text-primary-foreground hover:bg-primary-foreground hover:bg-primary hover:text-primary-foreground"
               >
                 Create New <ChevronDown className="ml-2" />
               </Button>
