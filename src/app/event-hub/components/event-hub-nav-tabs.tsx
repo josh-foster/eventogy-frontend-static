@@ -23,10 +23,7 @@ export default function EventHubNavTabs() {
       <div className="md:hidden">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button
-              variant="outline"
-              className="bg-primary min-w-32 text-primary-foreground hover:bg-primary hover:text-primary-foreground"
-            >
+            <Button variant="outline" className=" min-w-32">
               {segment ? capitiseFirstLetter(segment) : ""}
               <ChevronDown className="ml-2" />
             </Button>
