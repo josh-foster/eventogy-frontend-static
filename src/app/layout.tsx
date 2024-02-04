@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="flex justify-between items-center px-4 py-2.5 bg-muted">
+        <header className="flex justify-between items-center px-4 py-2.5 bg-muted z-20 w-full sticky top-0 left-0  overflow-x-hidden">
           <Image priority height={24} src={eventogyLogo} alt="Eventogy Logo" />
           <div className="relative inline-block w-6/12">
             <Search
