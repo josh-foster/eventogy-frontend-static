@@ -38,7 +38,7 @@ export default function EventCard({
         />
       </div>
       <CardHeader className="p-4">
-        <CardTitle className="text-lg">{event.name}</CardTitle>
+        <CardTitle className="text-lg line-clamp-1">{event.name}</CardTitle>
         <CardDescription>
           {new Date(event.created_at).toDateString()}
         </CardDescription>
