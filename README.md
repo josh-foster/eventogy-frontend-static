@@ -1,27 +1,34 @@
-![image](/public/eventogy-logo.svg)
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# Javascript Tech Task
+## Getting Started
 
-## OVERVIEW
+First, run the development server:
 
-You are tasked to build a simple interface against a slice of a REST API by forking this GitHub repository containing the foundation of a React + Next.js application.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-- API Endpoint - https://www.eventogy.com/api/events.json
-- Design Mock Up:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-![event_list](https://github.com/Eventogy/eventogy-frontend-static/assets/95762760/4c6aa659-7864-4649-9b0b-4755fc7862bf)
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## OBJECTIVES
+## Technologies Used
 
-Demonstrate that you're capable of planning and structuring your code in a way that allows for reusable, scalable, and well-thought-out components that will interact with a RESTful public API.
-Demonstrate your attention to detail in the presentation layer - does it work as expected, is it responsive, and are there any finishing touches.
+- [Typescript](https://www.typescriptlang.org/)
+- [shadcn/ui](https://ui.shadcn.com/) for components and theming
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Lucide React](https://lucide.dev/guide/packages/lucide-react) for icons
+- [Picsum Photos](https://picsum.photos/) to generate mock dynamic thumbnails
 
-## SPECIFICATIONS
+## Learn More
 
-You can (and should) use any and all resources at your disposal to complete the task. We suggest using style libraries like **Tailwind** and prebuilt component libraries, like **Shadcn**, rather than spending time manually styling the page.
+To learn more about Next.js, take a look at the following resources:
 
-We’re looking to see how much you can achieve in 2, 3 hours, but feel free to spend extra time in order to complete a subtask or fix a bug. Make sure you commit your project to the forked Git repository and periodically commit as you progress in the task.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### Bonus points
-
-Use UI interactive effects for elements such as loading the event cards.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
