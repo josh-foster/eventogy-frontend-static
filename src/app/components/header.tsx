@@ -12,7 +12,7 @@ export default function Header() {
       <Link href="/">
         <Image priority height={24} src={eventogyLogo} alt="Eventogy Logo" />
       </Link>
-      <div className="relative inline-block w-6/12">
+      <div className="relative inline-block w-1/3">
         <Search
           color="grey"
           className="absolute left-4 top-1/2 transform -translate-y-1/2 pointer-events-none p-0.5"
