@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Archive, Calendar, ChevronDown, LayoutPanelTop } from "lucide-react";
+import { Calendar, ChevronDown } from "lucide-react";
 import { useSelectedLayoutSegment } from "next/navigation";
 
 import { Button } from "../../../components/button";
@@ -40,31 +40,17 @@ export default function EventHubNavTabs() {
         </DropdownMenu>
       </div>
       <div className="hidden md:block">
-        <Link href="/event-hub/events">
-          <Button
-            variant={segment === "events" ? "default" : "outline"}
-            className="rounded-full p-6 mr-2"
-          >
-            <Calendar size={20} className="mr-2" /> Events
-          </Button>
-        </Link>
-        <Link href="/event-hub/templates">
-          <Button
-            variant={segment === "templates" ? "default" : "outline"}
-            className="rounded-full p-6 mr-2"
-          >
-            <LayoutPanelTop size={20} className="mr-2" />
-            Templates
-          </Button>
-        </Link>
-        <Link href="/event-hub/archive">
-          <Button
-            variant={segment === "archive" ? "default" : "outline"}
-            className="rounded-full p-6"
-          >
-            <Archive size={20} className="mr-2" /> Archive
-          </Button>
-        </Link>
+        {SEGMENTS.map((s) => (
+          <Link href={`/event-hub/${s}`}>
+            <Button
+              variant={segment === s ? "default" : "outline"}
+              className="rounded-full p-6 mr-2"
+            >
+              <Calendar size={20} className="mr-2" />{" "}
+              {s ? capitiseFirstLetter(s) : ""}
+            </Button>
+          </Link>
+        ))}
       </div>
     </>
   );
