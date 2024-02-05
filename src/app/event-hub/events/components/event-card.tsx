@@ -27,7 +27,7 @@ export default function EventCard({
   imgUrl: string;
 }) {
   return (
-    <Card className="shadow-lg m-2 w-80">
+    <Card className="shadow-lg">
       <div className="w-full h-2 b bg-primary rounded-tl-md rounded-tr-md" />
       <div className="relative aspect-[1920/1080]">
         <Image

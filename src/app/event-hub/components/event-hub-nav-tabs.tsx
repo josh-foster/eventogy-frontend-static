@@ -29,7 +29,7 @@ export default function EventHubNavTabs() {
   const Icon = segmentIconMap[segment ?? "events"];
   return (
     <>
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className=" min-w-32">
@@ -53,7 +53,7 @@ export default function EventHubNavTabs() {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         {SEGMENTS.map((s) => {
           const Icon = segmentIconMap[s ?? "events"];
           return (
