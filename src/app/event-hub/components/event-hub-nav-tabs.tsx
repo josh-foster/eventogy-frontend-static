@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Calendar, ChevronDown } from "lucide-react";
+import { Calendar, LayoutPanelTop, Archive, ChevronDown } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { useSelectedLayoutSegment } from "next/navigation";
 
 import { Button } from "../../../components/button";
@@ -14,11 +15,14 @@ import {
 import { capitiseFirstLetter } from "@/utils";
 
 const SEGMENTS = ["events", "templates", "archive"];
+
 const segmentIconMap: { [key in (typeof SEGMENTS)[number]]: LucideIcon } = {
   events: Calendar,
   templates: LayoutPanelTop,
   archive: Archive,
 };
+
+const PARENT_PATH = "/event-hub";
 
 export default function EventHubNavTabs() {
   const segment = useSelectedLayoutSegment();
@@ -29,6 +33,7 @@ export default function EventHubNavTabs() {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className=" min-w-32">
+              <Icon size={20} className="mr-2" />
               {segment ? capitiseFirstLetter(segment) : ""}
               <ChevronDown className="ml-2" />
             </Button>
