@@ -12,7 +12,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/dropdown-menu";
-import { capitiseFirstLetter } from "@/utils";
+import { capitaliseFirstLetter } from "@/utils";
 
 const SEGMENTS = ["events", "templates", "archive"];
 
@@ -34,7 +34,7 @@ export default function EventHubNavTabs() {
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className=" min-w-32">
               <Icon size={20} className="mr-2" />
-              {segment ? capitiseFirstLetter(segment) : ""}
+              {segment ? capitaliseFirstLetter(segment) : ""}
               <ChevronDown className="ml-2" />
             </Button>
           </DropdownMenuTrigger>
@@ -45,7 +45,7 @@ export default function EventHubNavTabs() {
                 <Link href={`${PARENT_PATH}/${s}`} key={s}>
                   <DropdownMenuItem>
                     <Icon size={20} className="mr-2" />
-                    {s ? capitiseFirstLetter(s) : ""}
+                    {s ? capitaliseFirstLetter(s) : ""}
                   </DropdownMenuItem>
                 </Link>
               );
@@ -63,7 +63,7 @@ export default function EventHubNavTabs() {
                 className="rounded-full p-6 mr-2"
               >
                 <Icon size={20} className="mr-2" />
-                {s ? capitiseFirstLetter(s) : ""}
+                {s ? capitaliseFirstLetter(s) : ""}
               </Button>
             </Link>
           );
