@@ -8,6 +8,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/dropdown-menu";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Eventogy - Event Hub",
+  description: "",
+};
 
 export default function EventHubLayout({
   children,
